@@ -1,33 +1,29 @@
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
-import Header from "./components/header/Header";
-import SimpleBottomNavigation from './components/BottomNav'
+import Header from "./components/Header/Header";
+import SimpleBottomNavigation from "./components/MainNav";
+import Movies from "./Pages/Movies/Movies";
+import Series from "./Pages/Series/Series";
+import Trending from "./Pages/Trending/Trending";
+import Search from "./Pages/Search/Search";
 import { Container } from "@material-ui/core";
-import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
-import MostPopular from './pages/mostPopular/mostPopular'
-import Movies from './pages/movies/movies'
-import TvSeries from './pages/tvSeries/tvSeries'
-import WatchList from './pages/watchList/watchList'
-import Watched from './pages/watched/watched'
-import Search from './pages/search/search'
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Header />
-      <div className="App">
-      <Container>
-        <Switch>
-          <Route path='/' component={MostPopular} exact/>
-          <Route path='/movies' component={Movies} />
-          <Route path='/tvSeries' component={TvSeries} />
-          <Route path='/watchList' component={WatchList} />
-          <Route path='/watched' component={Watched} />
-          <Route path='/search' component={Search} />
-        </Switch>
-      </Container>
+      <div className="app">
+        <Container>
+          <Switch>
+            <Route path="/" component={Trending} exact />
+            <Route path="/movies" component={Movies} />
+            <Route path="/series" component={Series} />
+            <Route path="/search" component={Search} />
+          </Switch>
+        </Container>
       </div>
       <SimpleBottomNavigation />
-    </Router>
+    </BrowserRouter>
   );
 }
 

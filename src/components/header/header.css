@@ -11,6 +11,7 @@
   box-shadow: 0px 1px 5px rgba(250, 246, 246, 0.918);
   color: white;
   z-index: 100;
+  font-weight: bold;
 }
 
 @media (max-width: 100px) {

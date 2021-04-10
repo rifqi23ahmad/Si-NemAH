@@ -4,11 +4,11 @@
     position: fixed;
     display: flex;
     justify-content: center;
-    background-color: rgba(214, 162, 149, 0.671);
+    background-color: rgba(10, 10, 10, 0.952);
     font-family: 'Roboto Mono', monospace;
     font-size: 4vw;
     padding-bottom: 15px;
-    box-shadow: 0px 1px 5px black;
+    box-shadow: 0px 1px 5px rgb(255, 254, 254);
     color: white;
     z-index: 100;
 }

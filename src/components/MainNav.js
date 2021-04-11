@@ -68,7 +68,7 @@ export default function SimpleBottomNavigation() {
       />
        <BottomNavigationAction
         style={{ color: "white" }}
-        label="WatchList"
+        label="Watch List"
         icon={<FavoriteIcon />}
       />
        <BottomNavigationAction

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
@@ -13,6 +13,10 @@ import "./ContentModal.css";
 import { Button } from "@material-ui/core";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import Carousel from "../Carousel/Carousel";
+import {GlobalContext} from '../../context/GlobalState'
+
+
+
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -32,7 +36,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function TransitionsModal({ children, media_type, id }) {
+export default function TransitionsModal({movie, children, media_type, id }) {
+  const {addMovieToWatchList,removeMovieFromWatchlist, watchList} = useContext(GlobalContext)
+
+  let storedMovie = watchList.find(i => i.id === id)
+  // console.log(watchList)
+  const watchListDisabled = storedMovie ? true : false 
+  
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState();
@@ -144,6 +154,25 @@ export default function TransitionsModal({ children, media_type, id }) {
                   >
                     Watch the Trailer
                   </Button>
+                  <Button
+                    variant="contained"
+                    startIcon={<YouTubeIcon />}
+                    color="primary"
+                    disabled={watchListDisabled}
+                    onClick={() => addMovieToWatchList(content)}
+                  >
+                    Add To Watchlist
+                  </Button>
+                  <Button
+                    variant="contained"
+                    startIcon={<YouTubeIcon />}
+                    color="primary"
+                    disabled={watchListDisabled}
+                    onClick={() => removeMovieFromWatchlist(content)}
+                  >
+                    Remove watchList
+                  </Button>
+
                 </div>
               </div>
             </div>

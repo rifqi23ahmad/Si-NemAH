@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
-.ContentModal__landscape {
+/* .ContentModal__landscape {
   object-fit: contain;
   border-radius: 10px;
 }
@@ -56,7 +56,7 @@
   height: 20%;
   overflow-y: scroll;
   padding: 20px;
-  scrollbar-width: thin; /* Firefox */
+  scrollbar-width: thin; 
   box-shadow: inset 0 0 5px #000000;
   text-align: justify;
 }
@@ -97,4 +97,53 @@ Button:disabled {
   .ContentModal__description {
     font-size: 22px;
   }
+} */
+
+img.ContentModal__portrait {
+  width: 200px;
+}
+
+.imgModal {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  text-align: center;
+}
+
+.ContentModal:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ContentModal__about {
+  float: right;
+  padding: 10px;
+  width: 58%;
+}
+
+.makeStyles-paper-3 {
+  height: auto !important;
+}
+@media only screen and (max-width: 700px) {
+
+  .imgModal {
+  float: unset;
+  width: auto;
+  padding: 10px;
+}
+
+.ContentModal__about {
+  float: unset;
+  padding: 10px;
+  width: auto;
+}
+
+.makeStyles-paper-3 {
+
+  overflow: scroll !important;
+  height: 80% !important;
+  overflow-y: scroll;
+}
+
 }

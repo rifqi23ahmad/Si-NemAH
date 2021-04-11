@@ -7,7 +7,7 @@ import axios from "axios";
 import {
   img_500,
   unavailable,
-  unavailableLandscape,
+  // unavailableLandscape,
 } from "../../config/config";
 import "./ContentModal.css";
 import { Button } from "@material-ui/core";
@@ -105,16 +105,18 @@ export default function TransitionsModal({movie, children, media_type, id }) {
           {content && (
             <div className={classes.paper}>
               <div className="ContentModal">
+                <div className="imgModal">
                 <img
                   src={
                     content.poster_path
                       ? `${img_500}/${content.poster_path}`
                       : unavailable
-                  }
+                    }
                   alt={content.name || content.title}
                   className="ContentModal__portrait"
                 />
-                <img
+                </div>
+                {/* <img
                   src={
                     content.backdrop_path
                       ? `${img_500}/${content.backdrop_path}`
@@ -122,7 +124,7 @@ export default function TransitionsModal({movie, children, media_type, id }) {
                   }
                   alt={content.name || content.title}
                   className="ContentModal__landscape"
-                />
+                /> */}
                 <div className="ContentModal__about">
                   <span className="ContentModal__title">
                     {content.name || content.title} (

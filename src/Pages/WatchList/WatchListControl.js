@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import { Button } from "@material-ui/core";
 import GlobalContext from '../../context/GlobalState'
+import YouTubeIcon from "@material-ui/icons/YouTube";
 
 const WatchListControl = ({id, type}) => {
     const {removeMovieFromWatchList} = useContext(GlobalContext)
@@ -8,9 +9,9 @@ const WatchListControl = ({id, type}) => {
   return (
     <Button
       variant="contained"
-    //   startIcon={<YouTubeIcon />}
+      startIcon={<YouTubeIcon />}
       color="primary"
-    //   disabled={watchListDisabled}
+      // disabled={watchListDisabled}
       onClick={() => removeMovieFromWatchList(id)}
     >
       Remove

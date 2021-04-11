@@ -15,8 +15,10 @@ const useStyles = makeStyles({
     width: "100%",
     position: "fixed",
     bottom: 0,
-    backgroundColor: "#2d313a",
+    background: "black",
     zIndex: 100,
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: "white",
   },
 });
 
@@ -52,7 +54,7 @@ export default function SimpleBottomNavigation() {
       className={classes.root}
     >
       <BottomNavigationAction
-        style={{ color: "white" }}
+        style={{ color: "Red" }}
         label="Trending"
         icon={<WhatshotIcon />}
       />

@@ -61,6 +61,10 @@
   text-align: justify;
 }
 
+Button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
 .ContentModal__description::-webkit-scrollbar {
   display: none;
 }

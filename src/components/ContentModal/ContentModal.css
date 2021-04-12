@@ -8,6 +8,7 @@
 .ContentModal__portrait {
   display: none;
   object-fit: contain;
+  height: 500px;
   border-radius: 10px;
 }
 
@@ -80,7 +81,7 @@ Button:disabled {
   .ContentModal {
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px;
+ 
   }
   .ContentModal__about {
     width: 58%;
@@ -96,6 +97,7 @@ Button:disabled {
   }
   .ContentModal__description {
     font-size: 22px;
+    overflow-y: scroll;
   }
 } */
 
@@ -144,6 +146,7 @@ img.ContentModal__portrait {
   overflow: scroll !important;
   height: 80% !important;
   overflow-y: scroll;
+  
 }
 
 } 

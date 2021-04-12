@@ -8,7 +8,7 @@ const Reducer = (state, action) => {
         case "REMOVE_MOVIE_FROM_WATCH_LIST":
             return {
                 ...state,
-                watchList: state.watchList.filter(movie => movie.id !== action.payload)
+                watchList: localStorage.getItem("watchList").filter(movie => movie.id !== action.payload)
             }
 
         default:

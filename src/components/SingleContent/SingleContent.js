@@ -2,6 +2,7 @@ import { Badge } from "@material-ui/core";
 import { img_300, unavailable } from "../../config/config";
 import "./SingleContent.css";
 import ContentModal from "../ContentModal/ContentModal";
+import WatchListControl from '../../Pages/WatchList/WatchListControl'
 
 const SingleContent = ({
   id,
@@ -10,6 +11,7 @@ const SingleContent = ({
   date,
   media_type,
   vote_average,
+  type,
 }) => {
   return (
     <>
@@ -28,7 +30,9 @@ const SingleContent = ({
           {media_type === "tv" ? "TV Series" : "Movie"}
           <span className="subTitle">{date}</span>
         </span>
+        {/* <WatchListControl type={type} id={id} /> */}
       </ContentModal>
+      <WatchListControl id={id} type={type} />
 
     </>
   );

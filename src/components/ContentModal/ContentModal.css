@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
-/* .ContentModal__landscape {
+.ContentModal__landscape {
   object-fit: contain;
   border-radius: 10px;
 }
@@ -26,21 +26,20 @@
   scrollbar-width: none;
 }
 
-.ContentModal::-webkit-scrollbar {
+.ContentModal::-webkit-scrollbar { 
   display: none;
 }
 
 .ContentModal__about {
   padding: 10px;
   width: 95%;
-  height: 90%;
+  height: 90%; 
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
   justify-content: space-evenly;
   font-weight: 200;
-}
-
+} 
 .ContentModal__title {
   height: 12%;
   font-size: 35px;
@@ -75,7 +74,7 @@ Button:disabled {
   }
   .ContentModal__portrait {
     display: flex;
-    width: 50%;
+    width: 100%;
   }
   .ContentModal {
     flex-direction: row;
@@ -122,16 +121,16 @@ img.ContentModal__portrait {
   width: 58%;
 }
 
-.makeStyles-paper-3 {
+.makeStyles-paper-3 { 
   height: auto !important;
 }
 @media only screen and (max-width: 700px) {
 
-  .imgModal {
+  /* .imgModal {
   float: unset;
   width: auto;
   padding: 10px;
-}
+} */
 
 .ContentModal__about {
   float: unset;
@@ -146,4 +145,4 @@ img.ContentModal__portrait {
   overflow-y: scroll;
 }
 
-}
+} 

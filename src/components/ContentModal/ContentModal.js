@@ -37,11 +37,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function TransitionsModal({movie, children, media_type, id }) {
-<<<<<<< HEAD
-  const {addMovieToWatchList, watchList} = useContext(GlobalContext)
-=======
   const {addMovieToWatchList,removeMovieFromWatchlist, watchList} = useContext(GlobalContext)
->>>>>>> c8161068fadf07c31505aa6951693f4701b9e76f
 
   let storedMovie = watchList.find(i => i.id === id)
   // console.log(watchList)
@@ -167,8 +163,6 @@ export default function TransitionsModal({movie, children, media_type, id }) {
                   >
                     Add To Watchlist
                   </Button>
-<<<<<<< HEAD
-=======
                   <Button
                     variant="contained"
                     startIcon={<YouTubeIcon />}
@@ -178,7 +172,6 @@ export default function TransitionsModal({movie, children, media_type, id }) {
                   >
                     Remove watchList
                   </Button>
->>>>>>> c8161068fadf07c31505aa6951693f4701b9e76f
 
                 </div>
               </div>

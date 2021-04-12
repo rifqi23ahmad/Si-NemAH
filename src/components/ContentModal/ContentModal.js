@@ -37,17 +37,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function TransitionsModal({movie, children, media_type, id }) {
-  const {addMovieToWatchList,removeMovieFromWatchlist, watchList} = useContext(GlobalContext)
+  const {addMovieToWatchList,removeMovieFromWatchList, watchList} = useContext(GlobalContext)
 
   let storedMovie = watchList.find(i => i.id === id)
-  // console.log(watchList)
   const watchListDisabled = storedMovie ? true : false 
   
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState();
   const [video, setVideo] = useState();
-
+  
   const handleOpen = () => {
     setOpen(true);
   };
@@ -62,7 +61,6 @@ export default function TransitionsModal({movie, children, media_type, id }) {
     );
 
     setContent(data);
-    // console.log(data);
   };
 
   const fetchVideo = async () => {
@@ -78,6 +76,7 @@ export default function TransitionsModal({movie, children, media_type, id }) {
     fetchVideo();
     // eslint-disable-next-line
   }, []);
+  
 
   return (
     <>
@@ -169,8 +168,8 @@ export default function TransitionsModal({movie, children, media_type, id }) {
                     variant="contained"
                     startIcon={<YouTubeIcon />}
                     color="primary"
-                    disabled={watchListDisabled}
-                    onClick={() => removeMovieFromWatchlist(content)}
+                    // disabled={watchListDisabled}
+                    onClick={() => removeMovieFromWatchList(id)}
                   >
                     Remove watchList
                   </Button>

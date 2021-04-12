@@ -3,6 +3,7 @@ import { img_300, unavailable } from "../../config/config";
 import "./SingleContent.css";
 import ContentModal from "../ContentModal/ContentModal";
 
+
 const SingleContent = ({
   id,
   poster,
@@ -29,7 +30,6 @@ const SingleContent = ({
           <span className="subTitle">{date}</span>
         </span>
       </ContentModal>
-
     </>
   );
 };

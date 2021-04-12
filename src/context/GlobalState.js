@@ -15,7 +15,6 @@ export const GlobalContext = createContext(initialState)
 
 // provider
 export const GlobalProvider = props => {
-    // const GlobalContext = createContext(initialState)
     const [state, dispatch] = useReducer(Reducer, initialState)
 
     useEffect(() => {
@@ -31,6 +30,8 @@ export const GlobalProvider = props => {
     const removeMovieFromWatchList = (id) => {
         dispatch({type: "REMOVE_MOVIE_FROM_WATCHLIST", payload: id})
     }
+
+    
     return (
         <GlobalContext.Provider
             value={{

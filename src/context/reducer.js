@@ -5,7 +5,7 @@ const Reducer = (state, action) => {
                 ...state,
                 watchList: [action.payload, ...state.watchList]
             }
-        case "REMOVE_MOVIE_FROM_WATCH_LIST":
+        case "REMOVE_MOVIE_FROM_WATCHLIST":
             return {
                 ...state,
                 watchList: state.watchList.filter(movie => movie.id !== action.payload)

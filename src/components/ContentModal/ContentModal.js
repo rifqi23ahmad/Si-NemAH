@@ -40,7 +40,6 @@ export default function TransitionsModal({movie, children, media_type, id }) {
   const {addMovieToWatchList,removeMovieFromWatchList, watchList} = useContext(GlobalContext)
 
   let storedMovie = watchList.find(i => i.id === id)
-  // console.log(watchList)
   const watchListDisabled = storedMovie ? true : false 
   
   const classes = useStyles();
@@ -62,9 +61,8 @@ export default function TransitionsModal({movie, children, media_type, id }) {
     );
 
     setContent(data);
-    console.log(data);
   };
-  // console.log(content.id)
+
   const fetchVideo = async () => {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
@@ -72,7 +70,6 @@ export default function TransitionsModal({movie, children, media_type, id }) {
 
     setVideo(data.results[0]?.key);
   };
-  // console.log(video)
 
   useEffect(() => {
     fetchData();
@@ -80,7 +77,6 @@ export default function TransitionsModal({movie, children, media_type, id }) {
     // eslint-disable-next-line
   }, []);
   
-  // console.log(id)
 
   return (
     <>

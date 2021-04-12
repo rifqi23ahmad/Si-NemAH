@@ -38,7 +38,6 @@ const Search = () => {
       );
       setContent(data.results);
       setNumOfPages(data.total_pages);
-      // console.log(data);
     } catch (error) {
       console.error(error);
     }

@@ -6,7 +6,6 @@ import Movies from "./Pages/Movies/Movies";
 import Series from "./Pages/Series/Series";
 import Trending from "./Pages/Trending/Trending";
 import WatchList from "./Pages/WatchList/WatchList";
-import Watched from "./Pages/Watched/Watched";
 import Search from "./Pages/Search/Search";
 import { Container } from "@material-ui/core";
 import { GlobalProvider } from "./context/GlobalState";
@@ -24,7 +23,6 @@ function App() {
               <Route path="/series" component={Series} />
               <Route path="/search" component={Search} />
               <Route path="/WatchList" component={WatchList} />
-              <Route path="/Watched" component={Watched} />
             </Switch>
           </Container>
         </div>

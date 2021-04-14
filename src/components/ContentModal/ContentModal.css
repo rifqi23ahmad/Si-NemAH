@@ -38,11 +38,11 @@
   flex-direction: column;
   font-family: "Roboto", sans-serif;
   justify-content: space-evenly;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .ContentModal__title {
-  height: 12%;
+  height: 19%;
   font-size: 5vw;
   display: flex;
   align-items: center;

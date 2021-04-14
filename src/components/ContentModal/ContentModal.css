@@ -69,7 +69,7 @@ Button:disabled {
   display: none;
 }
 
-@media (min-width: 835px) {
+@media (min-width: 745px) {
   .ContentModal__landscape {
     display: none;
   }
@@ -86,7 +86,7 @@ Button:disabled {
   .ContentModal__about {
     width: 58%;
     padding: 0;
-    height: 100%;
+    height: 50%;
   }
   .ContentModal__title {
     height: 12%;
@@ -129,11 +129,11 @@ img.ContentModal__portrait {
 }
 @media only screen and (max-width: 700px) {
 
-  /* .imgModal {
+  .imgModal {
   float: unset;
   width: auto;
   padding: 10px;
-} */
+} 
 
 .ContentModal__about {
   float: unset;

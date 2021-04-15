@@ -64,7 +64,7 @@
   display: none;
 }
 
-@media (min-width: 835px) {
+@media (min-width: 745px) {
   .ContentModal__landscape {
     display: none;
   }
@@ -80,7 +80,7 @@
   .ContentModal__about {
     width: 58%;
     padding: 0;
-    height: 100%;
+    height: 50%;
   }
   .ContentModal__title {
     font-size: 3.5vw;
@@ -88,4 +88,54 @@
   .ContentModal__description {
     font-size: 22px;
   }
+} */
+
+img.ContentModal__portrait {
+  width: 200px;
 }
+
+.imgModal {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  text-align: center;
+}
+
+.ContentModal:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ContentModal__about {
+  float: right;
+  padding: 10px;
+  width: 58%;
+}
+
+.makeStyles-paper-3 { 
+  height: auto !important;
+}
+@media only screen and (max-width: 700px) {
+
+  .imgModal {
+  float: unset;
+  width: auto;
+  padding: 10px;
+} 
+
+.ContentModal__about {
+  float: unset;
+  padding: 10px;
+  width: auto;
+}
+
+.makeStyles-paper-3 {
+
+  overflow: scroll !important;
+  height: 80% !important;
+  overflow-y: scroll;
+  
+}
+
+} 

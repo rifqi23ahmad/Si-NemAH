@@ -51,6 +51,7 @@ const Search = () => {
 
   return (
     <div>
+      <span className="pageTitle">Search Your Favorite Movie Here!</span>
       <ThemeProvider theme={darkTheme}>
         <div className="search">
           <TextField

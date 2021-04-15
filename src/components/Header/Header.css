@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 .header {
   width: 100%;
   cursor: pointer;
@@ -5,18 +7,23 @@
   display: flex;
   justify-content: center;
   background-color: #050608e0;
-  font-family: "Helveticat", sans-serif;
-  font-size: 25px;
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
   padding-bottom: 5px;
-  box-shadow: 0px 1px 5px rgba(250, 246, 246, 0.918);
+  box-shadow: 0px 1px 5px rgba(7, 7, 7, 0.918);
   color: white;
   z-index: 100;
-  font-weight: bold;
+  font-weight: initial;
 }
 
-@media (max-width: 100px) {
+@media (max-width: 300px) {
   .header {
     padding-top: 15px;
-    font-size: 6.4vw;
+    font-size: 5vw;
+  }
+  .header > div {
+    padding-top: 15px;
+    font-size: 5vw;
+    background-size: 10px;
   }
 }

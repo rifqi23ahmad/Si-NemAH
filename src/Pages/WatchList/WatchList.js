@@ -27,7 +27,7 @@ const WatchList = ({ movie, type }) => {
             ))}
         </div>
       ) : (
-        <h2>no movies in your list</h2>
+        <h2 style={{fontSize:'50px'}}>no movies in your list</h2>
       )}
     </>
   );

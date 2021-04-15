@@ -12,6 +12,8 @@ import {
 import "./ContentModal.css";
 import { Button } from "@material-ui/core";
 import YouTubeIcon from "@material-ui/icons/YouTube";
+import DeleteIcon from '@material-ui/icons/Delete';
+import AddBoxIcon from '@material-ui/icons/AddBox';
 import Carousel from "../Carousel/Carousel";
 import {GlobalContext} from '../../context/GlobalState'
 
@@ -41,6 +43,7 @@ export default function TransitionsModal({movie, children, media_type, id }) {
 
   let storedMovie = watchList.find(i => i.id === id)
   const watchListDisabled = storedMovie ? true : false 
+  const removeWatchListDisabled = storedMovie ? false : true
   
   const classes = useStyles();
   const [open, setOpen] = useState(false);
@@ -155,7 +158,7 @@ export default function TransitionsModal({movie, children, media_type, id }) {
                   </Button>
                   <Button
                     variant="contained"
-                    startIcon={<YouTubeIcon />}
+                    startIcon={<AddBoxIcon />}
                     color="primary"
                     disabled={watchListDisabled}
                     onClick={() => addMovieToWatchList(content)}
@@ -164,9 +167,9 @@ export default function TransitionsModal({movie, children, media_type, id }) {
                   </Button>
                   <Button
                     variant="contained"
-                    startIcon={<YouTubeIcon />}
+                    startIcon={<DeleteIcon />}
                     color="primary"
-                    // disabled={watchListDisabled}
+                    disabled={removeWatchListDisabled}
                     onClick={() => removeMovieFromWatchList(id)}
                   >
                     Remove watchList
